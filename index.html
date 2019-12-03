@@ -1,30 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OutErra | Airbnb</title>
+    <meta name="description" content="Showing the Top 10 rental results in canada, which people should explore before die">
+    <meta name="author" content="Dimpy Vaidya">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Composite 2</title>
-    <meta name="description" content="[A short description]">
-    <meta name="author" content="Dimpy Vaidya"> //
-    <!-- <link rel="stylesheet" href="css/reset.css"> -->
-    <!-- You may change this "Reset" to "Normalize" if preferred -->
+    <link rel="outerra icon" type="img/png" href="/img/TitleLogo.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- Material design icons are use below. Remove this line if using other font packs or images. Details on Material Design icons can be found here: https://material.io/resources/icons/ -->
-    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="stylesheet" href="css/style.css?v=1.0">
+
 </head>
 
 <body>
 
-    <header class="nav_hdr">
+
+    <section class="nav_hdr">
         <nav class="navbar">
             <button class="nav_btn hamburger">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </button>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
             <ul class="mainmenu">
+
+
                 <li>
                     <a href="#">MEN</a>
                 </li>
@@ -34,152 +38,269 @@
                 <li>
                     <a href="#">KIDS</a>
                 </li>
-                <li>
-                    <label>Search<input type="search" name="find" id="find"></label>
-                    <button type="button"><span class="material-icons">search</span></button>
-                </li>
-                <li><a href="#"><span class="material-icons">favorite_border</span></a></li>
-                <li><a href="#"><span class="material-icons">shopping_cart</span></a></li>
+
+            </ul>
         </nav>
+
+    </section>
+
+    <header class="header">
+        <a href="#"><img src="/img/logo.jpg" alt="logo" class="logo"></a>
+
     </header>
+    <div>
+        <h1 class="type">Best hotels and accomodations in Canada</h1>
+    </div>
+    <article class="gridStructure">
+        <form>
+            <h2>Filters</h2>
+            <fieldset>
+                <label for="sort">Show</label>
+                <select name="sort" id="sort">
+                    <option value="price-high">Price, highest to lowest</option>
+                    <option value="price-low">Price, lowest to highest</option>
+                    <option value="newest">Newest releases</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Colour</legend>
+                <ul class="filter_bullets">
+                    <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
+                    <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
+                    <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
+                    <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
+                    <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Sizes</legend>
+                <ol class="filter_bullets">
+                    <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
+                    <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
+                    <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
+                    <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
+                    <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Ratings (at least)</legend>
+                <ol class="filter_bullets">
+                    <li>
+                        <input type="radio" name="rating" value="4" id="aboveFour">
+                        <label for="aboveFour">
+                            <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" name="rating" value="3" id="aboveThree">
+                        <label for="aboveThree">
+                            <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" name="rating" value="2" id="aboveTwo">
+                        <label for="aboveTwo">
+                            <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="radio" name="rating" value="1" id="aboveOne">
+                        <label for="aboveOne">
+                            <span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                        </label>
+                    </li>
+                </ol>
+            </fieldset>
+        </form>
+        <main>
 
-    <main>
-        <header class="filter">
+            <div class="hotel-container">
+                <div class="hotel_block">
+                    <img src="img/product1.jpg" alt="hotel1" class="hotelimg">
+                    <div class="hotel_content">
+                        <h2 class="hotelnm">lorem ipsum</h2>
+                        <h3 class="price">160 CAD per night</h3>
+
+                    </div>
+                </div>
+                <div class="hotel_block">
+                    <img src="img/product2.jpg" alt="hotel2" class="hotelimg">
+                    <div class="hotel_content">
+                        <h2 class="hotelnm">Lorem ipsum</h2>
+                        <h3 class="price">180 CAD per night</h3>
+                    </div>
+                </div>
 
 
-            <!-- Filtering product form -->
-            <form>
-                <h2>Filters</h2>
-                <fieldset>
-                    <label for="sort">Show</label>
-                    <select name="sort" id="sort">
-              <option value="price-high">Price, highest to lowest</option>
-              <option value="price-low">Price, lowest to highest</option>
-              <option value="newest">Newest releases</option>
+                <div class="hotel_block">
+                    <img src="img/product3.jpg" alt="hotel3" class="hotelimg">
+                    <div class="hotel_content">
+                        <h2 class="hotelnm">Lorem ipsum dolor</h2>
+                        <h3 class="price">140 CAD per night</h3>
+                    </div>
+                </div>
+                <div class="hotel_block">
+                    <img src="img/product4.jpg" alt="hotel4" class="hotelimg">
+                    <div class="hotel_content">
+                        <h2 class="hotelnm">Lorem ipsum dolor</h2>
+                        <h3 class="price">160 CAD per night</h3>
+
+                    </div>
+                </div>
+                <div class="hotel_block">
+                    <img src="img/product5.jpg" alt="hotel5" class="hotelimg">
+                    <div class="hotel_content">
+                        <h2 class="hotelnm">Lorem ipsum dolor sit</h2>
+                        <h3 class="price">240 CAD per night</h3>
+                    </div>
+                </div>
+                <div class="hotel_block">
+                    <img src="img/product6.jpg" alt="hotel6" class="hotelimg">
+                    <div class="hotel_content">
+                        <h2 class="hotelnm">Lorem ipsum dolor sit</h2>
+                        <h3 class="price">120 CAD per night</h3>
+
+                    </div>
+                </div>
+                <div class="hotel_block">
+                    <img src="img/men1.jpg" alt="hotel7" class="hotelimg">
+                    <div class="hotel_content">
+                        <h2 class="hotelnm">Lorem ipsum dolor sit</h2>
+                        <h3 class="price">160 CAD per night</h3>
+
+                    </div>
+                </div>
+                <div class="hotel_block">
+                    <img src="img/men2.jpg" alt="hotel8" class="hotelimg">
+                    <div class="hotel_content">
+                        <h2 class="hotelnm">Lorem ipsum dolor sit</h2>
+                        <h3 class="price">130 CAD per night</h3>
+
+                    </div>
+                </div>
+
+                <div class="hotel_block">
+                    <img src="img/product7.jpg" alt="hotel9" class="hotelimg">
+                    <div class="hotel_content">
+                        <h2 class="hotelnm">Lorem ipsum dolor sit</h2>
+                        <h3 class="price">180 CAD per night</h3>
+
+                    </div>
+                </div>
+                <div class="hotel_block">
+                    <img src="img/product8.jpg" alt="hotel10" class="hotelimg">
+                    <div class="hotel_content">
+                        <h2 class="hotelnm">Lorem ipsum dolor sit</h2>
+                        <h3 class="price">200 CAD per night</h3>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </main>
+    </article>
+    <article class="bgimg">
+        <section class="box">
+            <div>
+                <img src="./img/lg.png" class="box_icon">
+                <BR CLEAR=”left” />
+                <h1>Find hotels in Canada</h1>
+            </div>
+            <div>
+                <h3>Select your destination</h3>
+                <select name="places" class="basicbox place">
+                <option value="Select">I want to go...</option>
+                <option value="Alberta">Banff and Lake Louise, Alberta</option>
+                <option value="nb">Bay of Fundy, New Brunswick</option>
+                <option value="pei">Cavendish Beach, Prince Edward Island</option>
+                <option value="Manitoba">Churchill, Manitoba</option>
+                <option value="Toronto">CN Tower, Toronto</option>
+                <option value="Newfoundland">Gros Morne National Park, Newfoundland</option>
+                <option value="Yukon">Kluane National Park, Yukon</option>
+                <option value="bc">Long Beach, Tofino, British Columbia</option>
+                <option value="Toronto">Niagra Falls, Toronto</option>
+                <option value="Ontario">The Muskoka Lakes, Ontario</option>
             </select>
-                </fieldset>
-                <fieldset>
-                    <legend>Colour</legend>
-                    <ul>
-                        <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
-                        <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
-                        <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
-                        <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
-                        <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
-                    </ul>
-                </fieldset>
-                <fieldset>
-                    <legend>Sizes</legend>
-                    <ol>
-                        <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
-                        <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
-                        <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
-                        <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
-                        <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
-                    </ol>
-                </fieldset>
-                <fieldset>
-                    <legend>Ratings (at least)</legend>
-                    <ol>
-                        <li>
-                            <input type="radio" name="rating" value="4" id="aboveFour">
-                            <label for="aboveFour">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
-                </label>
-                        </li>
-                        <li>
-                            <input type="radio" name="rating" value="3" id="aboveThree">
-                            <label for="aboveThree">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
-                </label>
-                        </li>
-                        <li>
-                            <input type="radio" name="rating" value="2" id="aboveTwo">
-                            <label for="aboveTwo">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
-                </label>
-                        </li>
-                        <li>
-                            <input type="radio" name="rating" value="1" id="aboveOne">
-                            <label for="aboveOne">
-                  <span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
-                </label>
-                        </li>
-                    </ol>
-                </fieldset>
-            </form>
-        </header>
+            </div>
+            <div class="date">
+                <h3>Check-in Date</h3>
+                <input type="text" name="fromdt" class="basicbox" value="yyyy-mm-dd">
+            </div>
+            <div class="date">
+                <h3>Check-out Date</h3>
+                <input type="text" name="todt" class="basicbox" value="yyyy-mm-dd">
+            </div>
+            <div>
+                <h3>Rooms required</h3>
+                <select name="rooms" class="basicbox room">
+                <option value="noofrooms">Rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+            </select>
+            </div>
+            <div>
+                <h3>Rooms choices</h3>
+                <select name="rooms" class="basicbox room">
+                <option value="noofrooms">Room views</option>
+                <option value="view1">Lake view</option>
+                <option value="view2">City view</option>
+                <option value="view3">Street view</option>
+            </select>
+            </div>
+            <div>
+                <a href="#" class="search_button">Find Hotels</a>
+            </div>
+        </section>
+
+
+
 
         <section>
-            <h2>Search Results</h2>
+            <div class="user">
+                <p>
+                    <h2 class="hotelnm">When are you planning to travel?</h2>
+                </p>
+                <div>
+                    <p>Add Dates for updated pricing and availability.</p><br>
+                    <a href="#" class="btn">Add Dates</a>
 
-            <!-- Note: All 5 products are identical -->
-            <div id="products">
-                <!-- Product 1 -->
-                <article class="product">
-                    <!-- <header>
-                        <img src="img/product.jpg" alt="Product Image">
-                    </header>
-                    <h3>Product Name</h3> -->
-                    <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
-                    <form>
-                        <fieldset>
-                            <legend>Colours</legend>
-                            <ul>
-                                <li><label><input type="radio" name="colour" value="r"> <span>Red</span></label></li>
-                                <li><label><input type="radio" name="colour" value="w"> <span>White</span></label></li>
-                                <li><label><input type="radio" name="colour" value="b"> <span>Blue</span></label></li>
-                            </ul>
-                        </fieldset>
-
-                        <fieldset>
-                            <legend>Sizes</legend>
-                            <ol>
-                                <li><label><input type="radio" name="size" value="m"> <span>M</span></label></li>
-                                <li><label><input type="radio" name="size" value="l"> <span>L</span></label></li>
-                                <li><label><input type="radio" name="size" value="xl"> <span>XL</span></label></li>
-                            </ol>
-                        </fieldset>
-
-                        <footer>
-                            <dl>
-                                <dt>Rating</dt>
-                                <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                            </dl>
-                            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
-                            <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-                            <button type="button"><span class="material-icons">favorite</span></button>
-                            <a href="#">see more</a>
-                        </footer>
-                    </form>
-                </article>
-
-
-    </main>
-
-
+                </div><br>
+                <p>Want to receive exclusive <strong>hotel offers?</strong> Subscribe to our newsletter!</p>
+                <div>
+                    <input type="text" name="email" class="basicbox email" value="Email address">
+                    <a href="#" class="btn">Subscribe</a>
+                </div>
+                <p>How likely are you to return to <em>OutErra.com?</em></p>
+                <div>
+                    <select name="likely" class="basicbox pagelike">
+                    <option value="choose">Please choose one...</option>
+                    <option value="highlike">Highly likely</option>
+                    <option value="somewhatlike">Somewhat likely</option>
+                    <option value="unsure">Unsure</option>
+                    <option value="somewhatunlike">Somewhat unlikely</option>
+                    <option value="highunlik">Highly unlikely</option>
+                </select>
+                </div>
+            </div>
+        </section>
+    </article>
 
     <footer class="footer">
         <div class="copyright">
+            <a href="#">
+                <img src="/img/social1.png" class="socialmedia">
+            </a>
             <p><strong>&copy 2019 OutErra.com, L.P. All rights reserved.</strong></p>
             <p>OutErra.com and the OutErra.com logo are trademarks or registered trademarks of OutErra.com, LP in the Canada and/or other countries. All other trademarks are property of their respective owners.</p>
-            <nav aria-label="Legal">
-                <ul>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Accessibility Policy</a></li>
-                </ul>
-            </nav>
-            <ul>
-                <li><a href="#"><span class="material-icons">face</span> Facebook</a></li>
-                <li><a href="#"><span class="material-icons">camera_alt</span> Instagram</a></li>
-                <li><a href="#"><span class="material-icons">alternate_email</span> Twitter</a></li>
-            </ul>
         </div>
         </div>
 
     </footer>
-    <script src="js/index.js"></script>
 </body>
 
 </html>
